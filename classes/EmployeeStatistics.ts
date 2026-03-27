@@ -49,4 +49,14 @@ class EmployeeStatistics {
             return highestPaidEmployee;
         };
     };
+
+    countEmployeesOverSalary(salary: number): number {
+        let employeesOverSalary: number = 0;
+        this.employee.forEach((emp: Employee) => {
+            if(emp.salary > salary) {
+                employeesOverSalary ++;
+            }
+        });
+        return employeesOverSalary;
+    };
 };
