@@ -10,8 +10,8 @@ class EmployeeStatistics {
     };
 
     getMaxSalary():number | undefined {
-        let maxSalary: number |undefined = this.employee[0]?.salary;
-        this.employee.forEach(emp => {
+        let maxSalary: number | undefined = this.employee[0]?.salary;
+        this.employee.forEach((emp:Employee) => {
             if (emp.salary > maxSalary) {
                 maxSalary = emp.salary;
             };
@@ -19,8 +19,12 @@ class EmployeeStatistics {
         return maxSalary;
     };
 
-    getAvaregaAge():number | undefined {
+    getAvarageAge():number | undefined {
         let summedAges = 0;
-        this.employee.forEach(emp)
+        this.employee.forEach((emp:Employee) => {
+            summedAges += emp.age;
+        });
+        const avgAge = (summedAges / (this.employee.length));
+        return avgAge;
     };
 };
