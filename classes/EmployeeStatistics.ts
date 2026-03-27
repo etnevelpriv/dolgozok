@@ -21,6 +21,6 @@ class EmployeeStatistics {
 
     getAvaregaAge():number | undefined {
         let summedAges = 0;
-        this.employee
+        this.employee.forEach(emp)
     };
 };
