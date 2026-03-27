@@ -35,4 +35,18 @@ class EmployeeStatistics {
             return avgAge;
         };
     };
+
+    getHighestPaidEmployee(): Employee | undefined {
+        let highestPaidEmployee: Employee | undefined = this.employee[0];
+        if (typeof highestPaidEmployee != "object") {
+            throw new Error(`A 'getHighestPaidEmployee' nem tudott lefutni, az 'Employee' tipusa: ${typeof highestPaidEmployee}`);
+        } else {
+            this.employee.forEach((emp: Employee) => {
+                if (emp.salary > highestPaidEmployee.salary) {
+                    highestPaidEmployee = emp;
+                };
+            });
+            return highestPaidEmployee;
+        };
+    };
 };
