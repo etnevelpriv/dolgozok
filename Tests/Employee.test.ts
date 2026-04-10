@@ -46,13 +46,9 @@ describe("Konstruktor tesztelese", () => {
     it("A testEmployees_1 employee-kat tartalmaz, nem kene visszadobnia semmit sem", () => {
         expect(() => new EmployeeStatistics(testEmployees_1)).not.toThrow(); // A copilotot kertem segitsegul a '.not.toThrow-hoz'. Hianyoztam az orakrol, most dolgozom vitest-el elosszor
     });
-});
-describe("Konstruktor tesztelese", () => {
     it("A testEmployees_2 employee-kat tartalmaz, nem kene visszadobnia semmit sem", () => {
         expect(() => new EmployeeStatistics(testEmployees_2)).not.toThrow();
     });
-});
-describe("Konstruktor tesztelese", () => {
     it("A testEmployees_3 ures, hibat kell visszadobnia", () => {
         expect(() => new EmployeeStatistics(testEmployees_3)).toThrow();
     });
@@ -64,23 +60,21 @@ describe("Metodusok tesztelese: getMaxSalary", () => {
     it("A testEmployees_1 'getMaxSalary' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_1).getMaxSalary()).toBe(5600);
     });
-});
-describe("Metodusok tesztelese: getMaxSalary", () => {
     it("A testEmployees_2 'getMaxSalary' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_2).getMaxSalary()).toBe(8900);
     });
 });
+
 // getAvarageAge
 describe("Metodusok tesztelese: getAvarageAge", () => {
     it("A testEmployees_2 'getAvarageAge' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_1).getAvarageAge()).toBe(23);
     });
-});
-describe("Metodusok tesztelese: getAvarageAge", () => {
     it("A testEmployees_2 'getAvarageAge' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_2).getAvarageAge()).toBe(51);
     });
 });
+
 // getHighestPaidEmployee
 describe("Metodusok tesztelese: getHighestPaidEmployee", () => {
     it("A testEmployees_2 'getHighestPaidEmployee' metodusanak az erteke", () => {
@@ -92,8 +86,6 @@ describe("Metodusok tesztelese: getHighestPaidEmployee", () => {
             }
         );
     });
-});
-describe("Metodusok tesztelese: getHighestPaidEmployee", () => {
     it("A testEmployees_2 'getHighestPaidEmployee' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_2).getHighestPaidEmployee()).toStrictEqual(
             {
@@ -104,33 +96,24 @@ describe("Metodusok tesztelese: getHighestPaidEmployee", () => {
         );
     });
 });
+
 // countEmployeesOverSalary
 describe("Metodusok tesztelese: countEmployeesOverSalary", () => {
     it("A testEmployees_2 'countEmployeesOverSalary' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_1).countEmployeesOverSalary(3000)).toBe(1);
     });
-});
-describe("Metodusok tesztelese: countEmployeesOverSalary", () => {
     it("A testEmployees_2 'countEmployeesOverSalary' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_1).countEmployeesOverSalary(2999)).toBe(2);
     });
-});
-describe("Metodusok tesztelese: countEmployeesOverSalary", () => {
     it("A testEmployees_2 'countEmployeesOverSalary' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_1).countEmployeesOverSalary(0)).toBe(3);
     });
-});
-describe("Metodusok tesztelese: countEmployeesOverSalary", () => {
     it("A testEmployees_2 'countEmployeesOverSalary' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_2).countEmployeesOverSalary(-99999999999999999)).toBe(3);
     });
-});
-describe("Metodusok tesztelese: countEmployeesOverSalary", () => {
     it("A testEmployees_2 'countEmployeesOverSalary' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_2).countEmployeesOverSalary(8900)).toBe(0);
     });
-});
-describe("Metodusok tesztelese: countEmployeesOverSalary", () => {
     it("A testEmployees_2 'countEmployeesOverSalary' metodusanak az erteke", () => {
         expect(new EmployeeStatistics(testEmployees_2).countEmployeesOverSalary(500)).toBe(2);
     });
