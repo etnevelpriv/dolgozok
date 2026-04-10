@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import type { Employee } from "../classes/Employee.ts";
-import type { EmployeeStatistics } from "../classes/EmployeeStatistics.ts";
+import { EmployeeStatistics } from "../classes/EmployeeStatistics.ts";
 
 const testEmployees_1: Employee[] = [
     {
@@ -41,3 +41,19 @@ const testEmployees_3: Employee[] = [
 
 ];
 
+// Konstrukktor tesztelese
+describe("add function", () => {
+    it("A testEmployees_1 employee-kat tartalmaz, nem kene visszadobnia semmit sem", () => {
+        expect(() => new EmployeeStatistics(testEmployees_1)).not.toThrow(); // A copilotot kertem segitsegul a '.not.toThrow-hoz'. Hianyoztam az orakrol, most dolgozom vitest-el elosszor
+    });
+});
+describe("add function", () => {
+    it("A testEmployees_2 employee-kat tartalmaz, nem kene visszadobnia semmit sem", () => {
+        expect(() => new EmployeeStatistics(testEmployees_2)).not.toThrow();
+    });
+});
+describe("add function", () => {
+    it("A testEmployees_3 ures, hibat kell visszadobnia", () => {
+        expect(() => new EmployeeStatistics(testEmployees_3)).toThrow();
+    });
+});
