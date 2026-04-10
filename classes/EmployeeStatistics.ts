@@ -1,6 +1,6 @@
 import type { Employee } from "./Employee.ts";
 
-class EmployeeStatistics {
+export class EmployeeStatistics {
     employee: Employee[];
     constructor(Employee: Employee[]) {
         if (Employee.length == 0) {
