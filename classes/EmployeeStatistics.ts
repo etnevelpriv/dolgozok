@@ -32,7 +32,7 @@ export class EmployeeStatistics {
                 summedAges += emp.age;
             });
             const avgAge = (summedAges / (this.employee.length));
-            return avgAge;
+            return Math.round(avgAge);
         };
     };
 
