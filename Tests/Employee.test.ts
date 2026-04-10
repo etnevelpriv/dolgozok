@@ -36,3 +36,8 @@ const testEmployees_2: Employee[] = [
         salary: 5454
     },
 ];
+
+const testEmployees_3: Employee[] = [
+
+];
+
