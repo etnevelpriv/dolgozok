@@ -55,7 +55,7 @@ class EmployeeStatistics {
         this.employee.forEach((emp: Employee) => {
             if(emp.salary > salary) {
                 employeesOverSalary ++;
-            }
+            };
         });
         return employeesOverSalary;
     };
